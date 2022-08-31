@@ -1,1 +1,0 @@
-before making anything in this world..
