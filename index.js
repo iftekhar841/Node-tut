@@ -103,14 +103,63 @@
 // console.log(a+b);
 
 // Promise use for remove the drawback of above code 
-let a = 10
-let b = 0;
-let waitingData = new Promise ((resolve, reject)=>{
-      setTimeout(()=>{
-            resolve(20);
-      },2000)      
-})
-waitingData.then((data)=>{
-      b = data;
-      console.log(a+b);
-})
+// let a = 10
+// let b = 0;
+// let waitingData = new Promise ((resolve, reject)=>{
+//       setTimeout(()=>{
+//             resolve(20);
+//       },2000)      
+// })
+// waitingData.then((data)=>{
+//       b = data;
+//       console.log(a+b);
+// })
+
+// Question :- Basic connect node js to mongodb ----------------*----------*++++++++
+
+// const { MongoClient, Db } = require('mongodb');
+// const url = 'mongodb://localhost:27017';
+// const database = 'Node-tut';            **** Make database name as common
+// const client = new MongoClient(url);
+
+// async function getData () 
+// {
+//     let result = await client.connect();
+//     let db = result.db(database);
+//     let collections = db.collection('Coder');
+//     let response = await db.collections.find({}).toArray();
+//     console.log(response);
+// }
+// getData();
+
+
+//  Question :- Read data from mongodb ----------------*----------*++++++++
+
+// const { MongoClient } = require('mongodb');
+// const url = 'mongodb://localhost:27017';
+// const database = 'Node-tut';            **** Make database name as common
+// const client = new MongoClient(url);
+
+// async function dbConnect() 
+// {
+//     let result = await client.connect();
+//     let db = result.db(database);
+//     return db.collection('Coder');
+// }
+
+
+//  *** promise handle showing below in two ways
+
+// ******** 1. dbConnect().then((resp)=>{
+//    resp.find({}).toArray().then((data) =>{
+//     console.log('data:-', data);
+//    });
+//  });
+
+// *******  2. const main = async () => {
+//     console.log('function called');
+//     let data = await dbConnect();
+//     let res = await data.find().toArray();
+//     console.log("🚀 ~ file: express.js ~ line 245 ~ main ~ data", res)
+//  }
+//  main();

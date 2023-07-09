@@ -1,0 +1,37 @@
+{
+  "name": "node-tut",
+  "version": "1.0.0",
+  "description": "a node js tutorial",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "nodemon api.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/iftekhar841/Node-tut.git"
+  },
+  "keywords": [
+    "code",
+    "step",
+    "by",
+    "step",
+    "follow"
+  ],
+  "author": "Md iftekhar",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/iftekhar841/Node-tut/issues"
+  },
+  "homepage": "https://github.com/iftekhar841/Node-tut#readme",
+  "dependencies": {
+    "ejs": "^3.1.9",
+    "express": "^4.18.2",
+    "mongodb": "^4.16.0",
+    "nodemon": "^2.0.22",
+    "simple-node-logger": "^21.8.12"
+  },
+  "devDependencies": {
+    "colors": "^1.4.0"
+  }
+}
